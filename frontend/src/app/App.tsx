@@ -1,22 +1,16 @@
-import reactLogo from '/react.svg';
-import viteLogo from '/vite.svg';
 import 'normalize.css';
+import './styles/colors.css';
+import './styles/variables.css';
 import './styles/index.css';
-import './styles/App.css';
+
+import styles from './App.module.css';
+import { HomeLayout } from '../components';
 
 function App() {
   return (
-    <>
-      <div>
-        <a href='https://vite.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Light Quizlet</h1>
-    </>
+    <HomeLayout>
+      <div></div>
+    </HomeLayout>
   );
 }
 
