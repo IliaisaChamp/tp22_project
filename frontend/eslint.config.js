@@ -20,6 +20,7 @@ export default tseslint.config(
       },
     },
     plugins: {
+      react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
@@ -31,7 +32,6 @@ export default tseslint.config(
       ...tseslint.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      // "react/display-name": [2, { "ignoreTranspilerName": true }],
       'no-unused-vars': 0,
       'react/prop-types': 0,
       'no-undef': 0,
@@ -39,9 +39,6 @@ export default tseslint.config(
       '@typescript-eslint/ban-ts-comment': 0,
       '@typescript-eslint/array-type': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
-      '@tanstack/query/exhaustive-deps': 'error',
-      '@tanstack/query/no-rest-destructuring': 'warn',
-      '@tanstack/query/stable-query-client': 'warn',
     },
   },
 );

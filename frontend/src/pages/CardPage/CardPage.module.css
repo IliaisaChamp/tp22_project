@@ -1,0 +1,20 @@
+.inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.back_button {
+  width: 64px;
+  height: 64px;
+}
+
+.image {
+  background: url('/public/back.svg') no-repeat center / contain;
+  width: 64px;
+  height: 64px;
+}
+
+.back_button:hover .image {
+  background: url('/public/back-hover.svg') no-repeat center / contain;
+}

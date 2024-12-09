@@ -1,0 +1,31 @@
+.folder {
+  display: inline-block;
+  width: 295px;
+  height: 300px;
+  cursor: pointer;
+  position: relative;
+}
+
+.folder:hover p {
+  transition: all 0.2s ease-out;
+  color: var(--primary-color);
+}
+
+.folder:hover svg rect {
+  transition: all 0.2s ease-out;
+  stroke: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+}
