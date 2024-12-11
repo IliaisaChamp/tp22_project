@@ -19,7 +19,7 @@
   background: url('/public/back-hover.svg') no-repeat center / contain;
 }
 
-.card__block{
+.card__block {
   width: 820px;
   margin: 0 auto;
 }
@@ -88,17 +88,19 @@
 
 .repeat {
   width: 400px;
-  border: 3px solid #F69EAF;
+  border: 3px solid var(--danger-color);
   padding: 20px;
   text-align: center;
   background-color: #FDFDFD;
+  transition: background-color 0.2s ease-out;
   cursor: pointer;
-  transition: background-color 0.2 ease-out;
 }
 
 .repeat svg {
-  stroke: #F69EAF;
-  transition: stroke 0.2 ease-out;
+  width: 34px;
+  height: 34px;
+  stroke: var(--danger-color);
+  transition: stroke 0.2s ease-out;
 }
 
 .repeat:hover {
@@ -106,7 +108,7 @@
 }
 
 .repeat:active {
-  background-color: #F69EAF;
+  background-color: var(--danger-color);
 }
 
 .repeat:active svg {
@@ -115,17 +117,17 @@
 
 .remember {
   width: 400px;
-  border: 3px solid #7EBE91;
+  border: 3px solid var(--success-color);
   padding: 20px;
   text-align: center;
   background-color: #FDFDFD;
+  transition: background-color 0.2s ease-out;
   cursor: pointer;
-  transition: background-color 0.2 ease-out;
 }
 
 .remember svg {
-  stroke: #7EBE91;
-  transition: stroke 0.2 ease-out;
+  stroke: var(--success-color);
+  transition: stroke 0.2s ease-out;
 }
 
 .remember:hover {
@@ -133,9 +135,67 @@
 }
 
 .remember:active {
-  background-color: #7EBE91;
+  background-color: var(--success-color);
 }
 
 .remember:active svg {
   stroke: #FFFFFF;
+}
+
+.end__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.end__block {
+  position: relative;
+  width: 606px;
+  height: 435px;
+}
+
+.end__img {
+  width: 100%;
+  height: 100%;
+  background: url('/public/laptop.svg') no-repeat center / contain;
+}
+
+.end__text {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  margin: 0;
+  color: #000;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  transform: translate(-27%, -50%);
+}
+
+.end__button {
+  display: block;
+  width: 610px;
+  margin-top: 40px;
+  border: 5px solid var(--primary-color);
+  padding: 20px;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  text-align: center;
+  background-color: #FDFDFD;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  cursor: pointer;
+}
+
+.end__button:hover {
+  background-color: #D1D0E2;
+}
+
+.end__button:active {
+  background-color: var(--primary-color);
+  color: #ffffff;
 }
