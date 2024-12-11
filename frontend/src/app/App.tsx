@@ -3,7 +3,7 @@ import './styles/colors.css';
 import './styles/variables.css';
 import './styles/index.css';
 
-import { CardPage, MainPage } from '../pages';
+import { CardPage, LoginPage, MainPage } from '../pages';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -11,7 +11,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/:key' element={<CardPage />} />F
+        <Route path='/:key' element={<CardPage />} />
+        <Route path='/login' element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );
