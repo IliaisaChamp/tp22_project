@@ -1,0 +1,50 @@
+.button {
+  font-size: 2rem;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.primary {
+  background: #fff;
+  border: 5px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.primary:hover {
+  background: var(--primary-light-color);
+}
+
+.primary:active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.success {
+  background: #fff;
+  border: 5px solid var(--success-color);
+  color: var(--success-color);
+}
+
+.success:hover {
+  background: var(--success-light-color);
+}
+
+.success:active {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.danger {
+  background: #fff;
+  border: 5px solid var(--danger-color);
+  color: var(--danger-color);
+}
+
+.danger:hover {
+  background: var(--danger-light-color);
+}
+
+.danger:active {
+  background: var(--danger-color);
+  color: #fff;
+}

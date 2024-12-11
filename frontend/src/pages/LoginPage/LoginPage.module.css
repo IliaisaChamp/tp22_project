@@ -1,0 +1,11 @@
+.container {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+    padding: 2.5rem 8rem;
+}
