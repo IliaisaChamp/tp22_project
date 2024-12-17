@@ -1,9 +1,11 @@
 :root {
   --primary-color: #8f8cbc;
+  --primary-light-color: rgba(209, 208, 226, 1);
   --danger-color: #f69eaf;
+  --danger-light-color: rgba(255, 221, 228, 1);
   --warning-color: #ebd78b;
   --warning-light-color: #ede6ca;
   --success-color: #7ebe91;
-  --success-light-color: #a3d292;
+  --success-light-color: rgba(186, 238, 167, 1);
   --background-color: rgba(239, 239, 239, 1);
 }

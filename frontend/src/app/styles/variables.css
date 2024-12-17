@@ -1,3 +1,4 @@
 :root {
   --container-max-width: 1440px;
+  --transition: .1s;
 }
