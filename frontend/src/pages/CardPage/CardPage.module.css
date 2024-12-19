@@ -1,7 +1,7 @@
 .inner {
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px;
+  width: calc(100% - 64px);
 }
 
 .back_button {
@@ -10,9 +10,9 @@
 }
 
 .image {
-  background: url('/public/back.svg') no-repeat center / contain;
   width: 64px;
   height: 64px;
+  background: url('/public/back.svg') no-repeat center / contain;
 }
 
 .back_button:hover .image {
