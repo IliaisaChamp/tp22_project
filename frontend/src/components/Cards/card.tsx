@@ -8,6 +8,7 @@ export const ExampleComponent = ({ data }: { data: string[] }) => {
   const [currentData, setCurrentData] = useState(data);
   const navigateEnd = useNavigate();
   const goMainEnd = () => navigateEnd('/');
+  let isFlipped = false;
 
   function resetCardRotation() {
     const checkbox = document.querySelector("#checkbox") as HTMLInputElement;
@@ -15,7 +16,8 @@ export const ExampleComponent = ({ data }: { data: string[] }) => {
 
     if (checkbox) {
         if (checkbox.checked) {
-            checkbox.checked = false;
+            isFlipped = false;
+            checkbox.checked = isFlipped;
         }
     }
 
@@ -30,16 +32,20 @@ export const ExampleComponent = ({ data }: { data: string[] }) => {
     const card = document.querySelector("#divCard") as HTMLDivElement;
 
     if (checkbox) {
-        if (checkbox.checked) {
-            checkbox.checked = false;
-        }
+        checkbox.checked = !checkbox.checked;
     }
 
     if (card) {
-        card.style.transform = "rotateX(180deg)";
+        if (isFlipped) {
+            card.style.transform = "rotateX(0deg)";
+        } else {
+            card.style.transform = "rotateX(180deg)";
+        }
+
         card.style.transition = "transform 0.6s ease-in-out";
+        isFlipped = !isFlipped;
     }
-  }
+};
 
 
   const handleNext = () => {
