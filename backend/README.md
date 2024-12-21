@@ -29,6 +29,11 @@ python manage.py migrate
 python3 manage.py runserver
 ```
 
+Запуск тестов
+```
+ python manage.py test
+```
+
 # **Примеры запросов API**
 
 Создание пользователя:
@@ -36,10 +41,13 @@ python3 manage.py runserver
 ```
    POST /api/register/
 ```
+
+```
   {
     "name":"example_user",
     "telegram_id": 1236456789
 }
+```
 Получение пользователя по telegram_id
 ```
  GET /api/user/<int:telegram_id>/
@@ -48,9 +56,4 @@ python3 manage.py runserver
 Получение всех пользователей
 ```
  GET /api/user/
-```
-
-Запуск тестов
-```
- python manage.py test
 ```
