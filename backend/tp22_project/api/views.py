@@ -11,7 +11,7 @@ class RegisterView(APIView):
 
         if User.objects.filter(telegram_id=telegram_id).exists():
             return Response(
-                {"telegram_id": "Этот Telegram ID уже занят."},
+                {"message": "Этот Telegram ID уже занят."},
                 status=status.HTTP_400_BAD_REQUEST)
 
         serializer = RegisterSerializer(data=request.data)
@@ -31,5 +31,12 @@ class GetUserByTelegramIDView(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         except User.DoesNotExist:
             return Response(
-                {"error": "User not found"},
+                {"error": "Пользователь не найден"},
                 status=status.HTTP_404_NOT_FOUND)
+
+
+class UserList(APIView):
+    def get(self, request):
+        users = User.objects.all()
+        serializer = UserSerializer(users, many=True)
+        return Response(serializer.data)

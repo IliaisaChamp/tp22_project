@@ -16,6 +16,10 @@ python -m pip install --upgrade pip
 ```
 pip install -r requirements.txt
 ```
+
+
+Команды выполняются в директории tp22_project (где лежит manage.py)
+
 Выполнить миграции:
 ```
 python manage.py migrate
@@ -24,6 +28,7 @@ python manage.py migrate
 ```
 python3 manage.py runserver
 ```
+
 # **Примеры запросов API**
 
 Создание пользователя:
@@ -38,4 +43,14 @@ python3 manage.py runserver
 Получение пользователя по telegram_id
 ```
  GET /api/user/<int:telegram_id>/
+```
+
+Получение всех пользователей
+```
+ GET /api/user/
+```
+
+Запуск тестов
+```
+ python manage.py test
 ```
