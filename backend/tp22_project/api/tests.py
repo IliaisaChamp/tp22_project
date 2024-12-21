@@ -7,7 +7,7 @@ from users.models import User
 class RegisterViewTests(TestCase):
     def setUp(self):
         self.client = APIClient()
-        self.url = "/api/register/"  # Путь для RegisterView
+        self.url = "/api/register/"
 
     def test_register_new_user_success(self):
         payload = {
@@ -26,12 +26,13 @@ class RegisterViewTests(TestCase):
         }
         response = self.client.post(self.url, data=payload)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        self.assertEqual(response.data["telegram_id"], "Этот Telegram ID уже занят.")
+        self.assertEqual(
+            response.data["telegram_id"],"Этот Telegram ID уже занят.")
 
     def test_register_invalid_payload(self):
         payload = {
             "telegram_id": 123456789
-        }  # Отсутствует поле "name"
+        }
         response = self.client.post(self.url, data=payload)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertIn("name", response.data)
@@ -39,7 +40,9 @@ class RegisterViewTests(TestCase):
 
 class GetUserByTelegramIDViewTests(TestCase):
     def setUp(self): 
-        self.user = User.objects.create(name="Test User", telegram_id=123456789)
+        self.user = User.objects.create(
+            name="Test User",
+            telegram_id=123456789)
         self.client = APIClient()
         self.base_url = "/api/user/"
 
